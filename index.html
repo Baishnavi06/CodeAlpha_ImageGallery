@@ -10,24 +10,39 @@
     <header>
         <h1>My Creative Gallery</h1>
         <p>CodeAlpha Internship - Task 1</p>
+        <button id="theme-toggle" class="theme-btn" style="margin-top: 15px;">Toggle Dark Mode 🌙</button>
     </header>
 
+    <div class="filter-container">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="nature">Nature</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+    </div>
+
     <main class="gallery-container">
-        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=600&q=80" alt="Nature" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Tech" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Architecture" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Nature" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Tech" class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80" alt="Architecture" class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=600&q=80" alt="Nature" class="gallery-item" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Tech" class="gallery-item" data-category="tech">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Architecture" class="gallery-item" data-category="architecture">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="Nature" class="gallery-item" data-category="nature">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Tech" class="gallery-item" data-category="tech">
+        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=600&q=80" alt="Architecture" class="gallery-item" data-category="architecture">
     </main>
 
     <div id="lightbox" class="lightbox">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <span class="close-btn" id="close-btn">&times;</span>
+
+        <button class="nav-btn" id="prev-btn">&#10094;</button> 
+        
         <div style="text-align: center;">
             <img id="lightbox-img" src="" alt="Full Screen Image">
             <br>
             <a id="download-btn" href="" download class="download-btn">Download Image 📥</a>
         </div>
+
+        <button class="nav-btn prev-btn" id="prev-btn">&#10094;</button> 
+        <button class="nav-btn next-btn" id="next-btn">&#10095;</button>
+
     </div>
 
     <script src="script.js"></script>
