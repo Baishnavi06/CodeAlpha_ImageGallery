@@ -15,7 +15,7 @@ A fully responsive, Pinterest-style image gallery built as Task 1 for the CodeAl
 * Vanilla JavaScript (ES6+, DOM Manipulation, State Management)
 
 ## 🚀 Live Demo
-[http://127.0.0.1:5500/index.html]
+[https://baishnavi06.github.io/CodeAlpha_ImageGallery/]
 
 ## 👨‍💻 Developer
 **Baishnavi Kumari**
