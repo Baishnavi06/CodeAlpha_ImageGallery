@@ -94,3 +94,17 @@ themeToggleBtn.addEventListener('click', () => {
         themeToggleBtn.textContent = 'Toggle Light Mode 🌞';
     }
 });
+
+// --- Keyboard Navigation Logic ---
+document.addEventListener('keydown', (e) => {
+    // Only run if the lightbox is actually open
+    if (lightbox.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') {
+            changeImage(-1); // Go left
+        } else if (e.key === 'ArrowRight') {
+            changeImage(1); // Go right
+        } else if (e.key === 'Escape') {
+            closeLightbox(); // Close on Esc key
+        }
+    }
+});
